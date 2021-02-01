@@ -1,0 +1,100 @@
+@mixin heart($font-taille: 20px, $empty, $full, $curtain) {
+
+    //    <div class="container">
+    //        <label for="check1" > 
+    //            <input class="check-heart" id="check1" type="checkbox" />
+    //            <div class="full-heart"><i class="fas fa-heart "></i> </div>
+    //            <div class="ridea"></div>
+    //            <div class="empty-heart"><i class="far fa-heart"></i></div> 
+    //        </label>
+    //    </div>
+    //
+    //    check2 ... .
+    //body {
+    //
+    //   display: flex;
+    //   justify-content: space-around;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   height: 100vh;
+    //   @include heart(25px);
+    //}
+
+
+
+    & .full-heart,
+    .empty-heart {
+        font-size: $font-taille;
+        color: $empty;
+    }
+
+    & .full-heart {
+        font-size: $font-taille;
+        color: $full;
+    }
+
+
+
+    .check-heart {
+        display: none;
+        &:checked~.ridea {
+            display: flex;
+            align-items: center;
+            transform: scaleY(0);
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+
+            &~.empty-heart {
+                color: transparent; 
+                
+            }
+        }
+
+        &:checked~.empty-heart:hover {
+            color: $empty;
+            cursor: grabbing;
+
+        }
+
+        &:checked~.full-heart {
+            animation: 200ms magnification 300ms;
+        }
+
+
+        &:not(:checked)~.empty-heart:hover {
+            color: $full;
+            cursor: grab;
+        }
+    }
+
+    .ridea {
+        transform-origin: top;
+        transform: scaleY(1);
+        background: $curtain;
+        width: $font-taille;
+        height: $font-taille;
+    }
+
+    .ridea,
+    .full-heart,
+    .empty-heart {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes magnification {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
