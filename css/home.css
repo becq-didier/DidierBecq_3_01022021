@@ -267,4 +267,33 @@
   font-weight: lighter;
 }
 
+.footer {
+  background: #353535;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px 20px;
+  color: white;
+}
+.footer__container__title {
+  font-family: Shrikhand, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.footer__container a {
+  color: white;
+  margin-top: 5px;
+}
+.footer__container a i {
+  font-size: 12px;
+  width: 50px;
+  margin-right: 5px;
+}
+.footer__container a span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=home.css.map */
