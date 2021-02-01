@@ -1,0 +1,15 @@
+ @mixin button($width){
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: $width;
+     height: 50px;
+     margin-bottom: 56px;
+     border-radius: 30px;
+     background: linear-gradient(175deg, $color-btn-secondary 0%, $color-btn-primary 100%);
+     border: none;
+     color: white;
+     font-size: 16px;
+     font-weight: 700;
+     padding: 10px 20px;
+}
