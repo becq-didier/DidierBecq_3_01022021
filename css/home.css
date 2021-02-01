@@ -1,5 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  min-width: 350px;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: Shrikhand, Arial, sans-serif;
+  font-size: rem(30px);
+  font-weight: 900;
+}
+
+h2 {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: rem(25px);
+  font-weight: 900;
+}
+
+p {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: rem(20px);
+  font-weight: 300;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  list-style: none;
+  font-family: Roboto, Arial, sans-serif;
+  text-decoration: none;
+  font-size: rem(22px);
+  color: black;
+}
+
+input {
+  font-size: rem(21px);
+}
+
+button {
+  font-size: rem(17px);
+  font-weight: 900;
+}
+
+i {
+  font-size: rem(21px);
+}
+
 @keyframes magnification {
   0% {
     transform: scale(1);
