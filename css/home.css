@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.header .header__logo h1 {
+  font-family: Shrikhand, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=home.css.map */
