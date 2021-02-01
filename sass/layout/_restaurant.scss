@@ -1,0 +1,72 @@
+.restaurant {
+    background: $color-fond-presentation;
+    margin-top: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__title {
+        padding-top: 65px;
+        padding-bottom: 10px;
+    }
+
+    &__dish {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.164);
+        overflow: hidden;
+
+        &__link {
+            cursor: pointer;
+
+
+            &__box-img {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 185px;
+                    object-fit: cover;
+                    object-position: 10% 61%;
+                }
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    border-radius: 2px;
+                    z-index: 10;
+                    background: $color-fond-flag;
+                    color: darken($color-fond-flag, 40%);
+                    font-size: 14px;
+                    width: 81px;
+                    height: 30px;
+                    top: 15px;
+                    right: 15px;
+                }
+            }
+
+            &__description {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 15px;
+
+                &__heart {
+                    bottom: 16px;
+                    right: 30px;
+                    position: relative;
+                    @include heart(18px, black, $color-btn-primary, white); // icone coeur
+                }
+
+                &__box__city {
+                    margin-top: 5px;
+                    font-weight: lighter;
+                }
+
+            }
+        }
+    }
+}

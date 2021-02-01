@@ -1,0 +1,35 @@
+.footer {
+    background: $color-fond-footer;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px 30px 20px;
+        color: white;
+
+
+        &__title {
+            font-family: Shrikhand, Arial, sans-serif;
+            font-weight: lighter;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        & a {
+            color: white;
+            margin-top: 5px;
+
+            i {
+                font-size: 12px;
+                width: 50px;
+                margin-right: 5px;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+        }
+    }
+}
