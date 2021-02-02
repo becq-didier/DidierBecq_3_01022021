@@ -51,7 +51,7 @@
         }
 
         &:checked~.empty-heart:hover {
-            color: $empty;
+        //     color: $empty;
             cursor: grabbing;
 
         }

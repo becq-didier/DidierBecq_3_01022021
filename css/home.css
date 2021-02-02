@@ -72,6 +72,23 @@ i {
     transform: scale(1);
   }
 }
+body .svg-settings {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+}
+body .fill-gradient-linear path {
+  fill: url(#linear);
+}
+body .linear-stop1 {
+  stop-color: #ff79DA;
+}
+body .linear-stop2 {
+  stop-color: #9356DC;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -301,7 +318,6 @@ i {
   color: transparent;
 }
 .restaurant__dish__link__description__heart .check-heart:checked ~ .empty-heart:hover {
-  color: black;
   cursor: grabbing;
 }
 .restaurant__dish__link__description__heart .check-heart:checked ~ .full-heart {
