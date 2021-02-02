@@ -249,7 +249,7 @@ i {
   object-fit: cover;
   object-position: 10% 61%;
 }
-.restaurant__dish__link__box-img span {
+.restaurant__dish__link__box-img__flag--show {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,6 +263,9 @@ i {
   height: 30px;
   top: 15px;
   right: 15px;
+}
+.restaurant__dish__link__box-img__flag--hidden {
+  display: none;
 }
 .restaurant__dish__link__description {
   display: flex;
