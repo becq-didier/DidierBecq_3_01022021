@@ -1,0 +1,24 @@
+body {
+
+    & .svg-settings {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+    }
+
+    //gradient linéaire
+    & .fill-gradient-linear path {
+        fill: url(#linear);
+    }
+
+    // définition des couleurs pour le dégradé linéaire 
+    & .linear-stop1 {
+        stop-color: $color-btn-secondary;
+    }
+
+    & .linear-stop2 {
+        stop-color: $color-btn-primary;
+    }
+}
