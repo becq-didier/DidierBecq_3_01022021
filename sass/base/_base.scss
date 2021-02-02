@@ -3,14 +3,14 @@
 *::before {
     margin: 0;
     padding: 0;
-    
+
 }
 
 body {
     font-family: Roboto, Arial, sans-serif;
     font-size: $html-font-size;
     text-rendering: optimizeLegibility;
-    min-width: 350px;
+    min-width: 320px;
 }
 
 header {
@@ -21,19 +21,19 @@ header {
 h1 {
     font-family: Shrikhand, Arial, sans-serif;
     font-size: rem(30px);
-    font-weight: 900;
+    font-weight: 100;
 }
 
 h2 {
     font-family: Roboto, Arial, sans-serif;
-    font-size: rem(25px);
+    font-size: rem(24px);
     font-weight: 900;
 }
 
 p {
     font-family: Roboto, Arial, sans-serif;
-    font-size: rem(20px);
-    font-weight: 300;
+    font-size: rem(18px);
+    font-weight: 100;
 }
 
 li {
@@ -44,19 +44,20 @@ a {
     list-style: none;
     font-family: Roboto, Arial, sans-serif;
     text-decoration: none;
-    font-size: rem(22px);
+    //   font-size: rem(22px);
     color: black;
 }
 
 input {
-    font-size: rem(21px);
+    font-size: rem(16px);
+    font-weight: 600;
 }
 
 button {
-    font-size: rem(17px);
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 i {
-    font-size: rem(21px);
+    font-size: rem(16px);
 }

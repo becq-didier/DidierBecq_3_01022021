@@ -1,100 +1,77 @@
 @mixin heart($font-taille: 20px, $empty, $full, $curtain) {
+    position: relative;
 
-    //    <div class="container">
-    //        <label for="check1" > 
-    //            <input class="check-heart" id="check1" type="checkbox" />
-    //            <div class="full-heart"><i class="fas fa-heart "></i> </div>
-    //            <div class="ridea"></div>
-    //            <div class="empty-heart"><i class="far fa-heart"></i></div> 
-    //        </label>
-    //    </div>
-    //
-    //    check2 ... .
-    //body {
-    //
-    //   display: flex;
-    //   justify-content: space-around;
-    //   flex-direction: column;
-    //   align-items: center;
-    //   height: 100vh;
-    //   @include heart(25px);
-    //}
+    &__heart {
+        position: absolute;
+        bottom: $font-taille * 2;
+        right: $font-taille * 2;
 
-
-
-    & .full-heart,
-    .empty-heart {
-        font-size: $font-taille;
-        color: $empty;
-    }
-
-    & .full-heart {
-        font-size: $font-taille;
-        color: $full;
-    }
-
-
-
-    .check-heart {
-        display: none;
-        &:checked~.ridea {
+        label {
             display: flex;
+            justify-content: center;
             align-items: center;
-            transform: scaleY(0);
-            transition-duration: 300ms;
-            transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+        }
 
-            &~.empty-heart {
-                color: transparent; 
-                
+        &__check {
+            display: block;
+            position: absolute;
+            display: none;
+
+            &:checked {
+                &~.ridea {
+                    transform: scaleY(0);
+                    transition-duration: 500ms;
+                    transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+                }
+
+                &~.full {
+                    animation: 200ms magnification 500ms;
+                }
+
+                &~.empty {
+                    color: $empty;
+
+                    &:hover {
+                        cursor: grabbing;
+
+                    }
+
+                }
+            }
+
+
+            &:not(:checked)~.empty:hover {
+                color: $full;
+                cursor: grab;
             }
         }
 
-        &:checked~.empty-heart:hover {
-        //     color: $empty;
-            cursor: grabbing;
-
+        i {
+            font-size: $font-taille;
+            position: absolute;
         }
 
-        &:checked~.full-heart {
-            animation: 200ms magnification 300ms;
-        }
+        .ridea {
+            position: absolute;
+            width: $font-taille * 2;
+            height: $font-taille * 2;
+            transform-origin: top;
+            background: $curtain;
 
-
-        &:not(:checked)~.empty-heart:hover {
-            color: $full;
-            cursor: grab;
         }
     }
 
-    .ridea {
-        transform-origin: top;
-        transform: scaleY(1);
-        background: $curtain;
-        width: $font-taille;
-        height: $font-taille;
-    }
+    @keyframes magnification {
+        0% {
+            transform: scale(1);
+        }
 
-    .ridea,
-    .full-heart,
-    .empty-heart {
-        position: absolute;
-        text-align: center;
-        top: 0;
-        left: 0;
-    }
-}
+        50% {
+            transform: scale(1.2);
+        }
 
-@keyframes magnification {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
+        100% {
+            transform: scale(1);
+        }
     }
 }

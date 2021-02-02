@@ -2,8 +2,9 @@ body {
 
     & .svg-settings {
         position: absolute !important;
-        height: 1px;
-        width: 1px;
+        color: blue;
+        //height: 1000px;
+        //width: 1000px;
         overflow: hidden;
         clip: rect(1px 1px 1px 1px);
     }

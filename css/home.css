@@ -11,7 +11,7 @@ body {
   font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
   text-rendering: optimizeLegibility;
-  min-width: 350px;
+  min-width: 320px;
 }
 
 header {
@@ -20,20 +20,20 @@ header {
 
 h1 {
   font-family: Shrikhand, Arial, sans-serif;
-  font-size: rem(30px);
-  font-weight: 900;
+  font-size: 1.875rem;
+  font-weight: 100;
 }
 
 h2 {
   font-family: Roboto, Arial, sans-serif;
-  font-size: rem(25px);
+  font-size: 1.5rem;
   font-weight: 900;
 }
 
 p {
   font-family: Roboto, Arial, sans-serif;
-  font-size: rem(20px);
-  font-weight: 300;
+  font-size: 1.125rem;
+  font-weight: 100;
 }
 
 li {
@@ -44,38 +44,26 @@ a {
   list-style: none;
   font-family: Roboto, Arial, sans-serif;
   text-decoration: none;
-  font-size: rem(22px);
   color: black;
 }
 
 input {
-  font-size: rem(21px);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 button {
-  font-size: rem(17px);
-  font-weight: 900;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 i {
-  font-size: rem(21px);
+  font-size: 1rem;
 }
 
-@keyframes magnification {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 body .svg-settings {
   position: absolute !important;
-  height: 1px;
-  width: 1px;
+  color: blue;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px);
 }
@@ -97,11 +85,6 @@ body .linear-stop2 {
   height: 60px;
   display: flex;
   align-items: center;
-}
-.header .header__logo h1 {
-  font-family: Shrikhand, Arial, sans-serif;
-  font-size: 30px;
-  font-weight: 100;
 }
 
 .presentation {
@@ -130,8 +113,6 @@ body .linear-stop2 {
   margin-left: 18px;
   border: none;
   background: #EAEAEA;
-  font-size: 16px;
-  font-weight: 600;
   color: #353535;
 }
 .presentation__form__title {
@@ -140,16 +121,12 @@ body .linear-stop2 {
   margin-left: 45px;
   margin-right: 45px;
   margin-top: 40px;
-  font-size: 24px;
-  font-weight: 900;
 }
 .presentation__form__text {
   display: flex;
   align-items: center;
   height: 63px;
   margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: 100;
 }
 .presentation__form__btn {
   display: flex;
@@ -162,8 +139,6 @@ body .linear-stop2 {
   background: linear-gradient(175deg, #ff79DA 0%, #9356DC 100%);
   border: none;
   color: white;
-  font-size: 16px;
-  font-weight: 700;
   padding: 10px 20px;
 }
 
@@ -253,6 +228,62 @@ body .linear-stop2 {
   border-radius: 15px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.164);
   overflow: hidden;
+  position: relative;
+}
+.restaurant__dish__heart {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+.restaurant__dish__heart label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant__dish__heart__check {
+  display: block;
+  position: absolute;
+  display: none;
+}
+.restaurant__dish__heart__check:checked ~ .ridea {
+  transform: scaleY(0);
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+}
+.restaurant__dish__heart__check:checked ~ .full {
+  animation: 200ms magnification 500ms;
+}
+.restaurant__dish__heart__check:checked ~ .empty {
+  color: transparent;
+}
+.restaurant__dish__heart__check:checked ~ .empty:hover {
+  cursor: grabbing;
+}
+.restaurant__dish__heart__check:not(:checked) ~ .empty:hover {
+  color: #9356DC;
+  cursor: grab;
+}
+.restaurant__dish__heart i {
+  font-size: 20px;
+  position: absolute;
+}
+.restaurant__dish__heart .ridea {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  transform-origin: top;
+  background: white;
+}
+@keyframes magnification {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .restaurant__dish__link {
   cursor: pointer;
@@ -285,64 +316,9 @@ body .linear-stop2 {
   display: none;
 }
 .restaurant__dish__link__description {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin: 15px;
 }
-.restaurant__dish__link__description__heart {
-  bottom: 16px;
-  right: 30px;
-  position: relative;
-}
-.restaurant__dish__link__description__heart .full-heart,
-.restaurant__dish__link__description__heart .empty-heart {
-  font-size: 18px;
-  color: black;
-}
-.restaurant__dish__link__description__heart .full-heart {
-  font-size: 18px;
-  color: #9356DC;
-}
-.restaurant__dish__link__description__heart .check-heart {
-  display: none;
-}
-.restaurant__dish__link__description__heart .check-heart:checked ~ .ridea {
-  display: flex;
-  align-items: center;
-  transform: scaleY(0);
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
-}
-.restaurant__dish__link__description__heart .check-heart:checked ~ .ridea ~ .empty-heart {
-  color: transparent;
-}
-.restaurant__dish__link__description__heart .check-heart:checked ~ .empty-heart:hover {
-  cursor: grabbing;
-}
-.restaurant__dish__link__description__heart .check-heart:checked ~ .full-heart {
-  animation: 200ms magnification 300ms;
-}
-.restaurant__dish__link__description__heart .check-heart:not(:checked) ~ .empty-heart:hover {
-  color: #9356DC;
-  cursor: grab;
-}
-.restaurant__dish__link__description__heart .ridea {
-  transform-origin: top;
-  transform: scaleY(1);
-  background: white;
-  width: 18px;
-  height: 18px;
-}
-.restaurant__dish__link__description__heart .ridea,
-.restaurant__dish__link__description__heart .full-heart,
-.restaurant__dish__link__description__heart .empty-heart {
-  position: absolute;
-  text-align: center;
-  top: 0;
-  left: 0;
-}
-.restaurant__dish__link__description__box__city {
+.restaurant__dish__link__description__city {
   margin-top: 5px;
   font-weight: lighter;
 }
@@ -367,7 +343,7 @@ body .linear-stop2 {
   margin-top: 5px;
 }
 .footer__container a i {
-  font-size: 12px;
+  font-size: 0.75rem;
   width: 50px;
   margin-right: 5px;
 }

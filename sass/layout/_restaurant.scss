@@ -17,6 +17,9 @@
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.164);
         overflow: hidden;
 
+
+        @include heart(20px, transparent, $color-btn-primary, white); // icone coeur
+
         &__link {
             cursor: pointer;
 
@@ -54,19 +57,9 @@
             }
 
             &__description {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 margin: 15px;
 
-                &__heart {
-                    bottom: 16px;
-                    right: 30px;
-                    position: relative;
-                    @include heart(18px, black, $color-btn-primary, white); // icone coeur
-                }
-
-                &__box__city {
+                &__city {
                     margin-top: 5px;
                     font-weight: lighter;
                 }
