@@ -150,6 +150,9 @@ body .linear-stop2 {
 .operating__title {
   margin: 50px 20px;
 }
+.operating__order {
+  position: relative;
+}
 .operating__order__num {
   display: flex;
   align-items: center;
@@ -355,6 +358,92 @@ body .linear-stop2 {
 .footer__container a span {
   font-size: 14px;
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "_header _restaurant _restaurant _restaurant" "_presentation _restaurant _restaurant _restaurant" "_operating _restaurant _restaurant _restaurant" "_footer _footer _footer _footer";
+    background: #F6F6F6;
+  }
+  body .header {
+    margin-top: 70px;
+  }
+  body .header__logo {
+    grid-area: _header;
+    background: #F6F6F6;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  body .header__logo h1 {
+    font-size: 50px;
+  }
+  body .presentation {
+    grid-area: _presentation;
+  }
+  body .presentation__form__title {
+    order: 1;
+    margin-top: 30px;
+  }
+  body .presentation__form__text {
+    order: 2;
+  }
+  body .presentation__form__search {
+    order: 3;
+    width: 230px;
+    border-radius: 50px;
+  }
+  body .presentation__form__btn {
+    margin-top: 20px;
+    order: 4;
+  }
+  body .operating {
+    grid-area: _operating;
+    height: 100%;
+    min-width: 350px;
+    margin-bottom: 30px;
+    background: #F6F6F6;
+  }
+  body .operating__title {
+    margin: 20px;
+  }
+  body .restaurant {
+    grid-area: _restaurant;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    background: white;
+    align-items: flex-end;
+  }
+  body .restaurant__title {
+    padding: 30px;
+    margin-top: 0;
+    width: 100%;
+  }
+  body .restaurant__dish {
+    min-width: 330px;
+  }
+  body .footer {
+    grid-area: _footer;
+  }
+  body .footer__container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .restaurant {
+    padding-bottom: 90px;
+    justify-content: space-around;
+  }
+  body .restaurant__dish {
+    margin-left: 10px;
+    max-width: 45%;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
