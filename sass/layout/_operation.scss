@@ -5,6 +5,8 @@
     }
 
     &__order {
+        position: relative;
+
         &__num {
 
             display: flex;
@@ -38,7 +40,8 @@
                 margin-right: 20px;
 
             }
-            & span{
+
+            & span {
                 font-weight: bold;
             }
 
@@ -48,7 +51,7 @@
                     color: $color-btn-primary;
                 }
 
-                background: lighten($color-btn-primary,35%);
+                background: lighten($color-btn-primary, 35%);
             }
 
         }
