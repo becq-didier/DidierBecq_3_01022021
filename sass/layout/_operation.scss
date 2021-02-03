@@ -5,6 +5,8 @@
     }
 
     &__order {
+        position: relative;
+
         &__num {
 
             display: flex;
@@ -13,7 +15,7 @@
             height: 70px;
             margin: 20px 30px;
             border-radius: 20px;
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.164);
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
 
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}):before {
@@ -38,7 +40,8 @@
                 margin-right: 20px;
 
             }
-            & span{
+
+            & span {
                 font-weight: bold;
             }
 
@@ -48,7 +51,7 @@
                     color: $color-btn-primary;
                 }
 
-                background: lighten($color-btn-primary,35%);
+                background: lighten($color-btn-primary, 35%);
             }
 
         }

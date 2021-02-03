@@ -1,0 +1,128 @@
+@media screen and (min-width : 768px) {
+
+
+
+    body {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "_header _restaurant _restaurant _restaurant"
+            "_presentation _restaurant _restaurant _restaurant"
+            "_operating _restaurant _restaurant _restaurant"
+            //"_footer _restaurant _restaurant _restaurant"
+            "_footer _footer _footer _footer"
+        ;
+        background: $color-fond-presentation;
+
+        & .header {
+            margin-top: 70px;
+
+            &__logo {
+                grid-area: _header;
+                background: $color-fond-presentation;
+                height: 70px;
+                display: flex;
+                align-items: center;
+
+                & h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+
+
+        & .presentation {
+            grid-area: _presentation;
+
+            &__form {
+
+                &__title {
+                    order: 1;
+                    margin-top: 30px;
+                }
+
+                &__text {
+                    order: 2;
+                }
+
+                &__search {
+                    order: 3;
+                    width: 230px;
+                    border-radius: 50px;
+
+                }
+
+                &__btn {
+                    margin-top: 20px;
+                    order: 4;
+                }
+            }
+
+
+        }
+
+        & .operating {
+            grid-area: _operating;
+            height: 100%;
+            min-width: 350px;
+            margin-bottom: 30px;
+            background: $color-fond-presentation;
+
+            &__title {
+                margin: 20px;
+            }
+
+        }
+
+        & .restaurant {
+            grid-area: _restaurant;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0;
+            background: white;
+            align-items: flex-end;
+
+            &__title {
+                padding: 30px;
+                margin-top: 0;
+                width: 100%;
+            }
+
+            &__dish {
+                min-width: 330px;
+
+            }
+
+
+        }
+
+        & .footer {
+            grid-area: _footer;
+            &__container{
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: baseline;
+                margin-right: 40px
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width : 1200px) {
+
+    body {
+        & .restaurant {
+            padding-bottom: 90px;
+            justify-content: space-around;
+
+            &__dish {
+
+                margin-left: 10px;
+                max-width: 45%;
+            }
+        }
+
+    }
+
+}
