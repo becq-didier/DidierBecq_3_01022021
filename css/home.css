@@ -135,11 +135,16 @@ body .linear-stop2 {
   width: 230px;
   height: 50px;
   margin-bottom: 56px;
+  padding: 10px 20px;
   border-radius: 30px;
-  background: linear-gradient(175deg, #ff79DA 0%, #9356DC 100%);
   border: none;
   color: white;
-  padding: 10px 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(175deg, #ff79DA 0%, #9356DC 100%);
+}
+.presentation__form__btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6), inset -1px -1px 2px #9356DC;
+  background: linear-gradient(175deg, #ff8de0 0%, #965add 100%);
 }
 
 .operating__title {
@@ -152,7 +157,7 @@ body .linear-stop2 {
   height: 70px;
   margin: 20px 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.164);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
 }
 .operating__order__num:nth-child(1):before {
   display: flex;
