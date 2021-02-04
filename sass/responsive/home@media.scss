@@ -98,11 +98,14 @@
 
         & .footer {
             grid-area: _footer;
-            &__container{
+            
+
+            &__container {
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: baseline;
-                margin-right: 40px
+                margin-right: 40px;
+                padding: 10px;
             }
         }
     }
@@ -121,6 +124,12 @@
                 margin-left: 10px;
                 max-width: 45%;
             }
+        }
+
+        .footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
     }

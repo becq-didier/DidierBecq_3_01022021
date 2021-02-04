@@ -433,6 +433,7 @@ body .linear-stop2 {
     justify-content: space-around;
     align-items: baseline;
     margin-right: 40px;
+    padding: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -443,6 +444,11 @@ body .linear-stop2 {
   body .restaurant__dish {
     margin-left: 10px;
     max-width: 45%;
+  }
+  body .footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   }
 }
 
