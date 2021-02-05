@@ -1,0 +1,64 @@
+.header {
+    animation: slideX 1s ease-in 5s backwards;
+}
+
+.presentation {
+    animation: slideX 1.5s ease-in 5s backwards;
+}
+
+.operating {
+    animation: slideX 2s ease-in 5s backwards;
+}
+
+.restaurant {
+    animation: slideY 2.5s ease-in 5s backwards;
+}
+
+@for $i from 2 through 5 {
+    .restaurant__dish:nth-child(#{$i}) {
+        animation: slideY #{2.5s + $i * 0.4s} ease-in 5s backwards;
+    }
+
+}
+
+.footer {
+    animation: slideY 5s ease-in 5s backwards;
+}
+
+@keyframes slideX {
+    0% {
+        visibility: hidden;
+        transform: scale(0);
+        transform: translateX(5000px);
+    }
+
+    99% {
+       
+        transform: scale(1);
+        transform: translateX(0px);
+    }
+
+    100% {
+        visibility: show;
+        
+    }
+}
+
+@keyframes slideY {
+    0% {
+        visibility: hidden;
+        transform: scale(0);
+        transform: translateY(5000px);
+    }
+
+    99% {
+       
+        transform: scale(1);
+        transform: translateY(0px);
+    }
+
+    100% {
+        visibility: show;
+        
+    }
+}
