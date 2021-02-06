@@ -17,7 +17,7 @@
             position: absolute;
             display: none;
 
-            &:checked {
+            &:checked , &:hover{
                 &~.ridea {
                     transform: scaleY(0);
                     transition-duration: 500ms;
@@ -39,11 +39,6 @@
                 }
             }
 
-
-            &:not(:checked)~.empty:hover {
-                color: $full;
-                cursor: grab;
-            }
         }
 
         i {
