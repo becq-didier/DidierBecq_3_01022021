@@ -404,19 +404,35 @@ body .linear-stop2 {
   position: absolute;
   display: none;
 }
-.restaurant__dish__heart__check:checked ~ .ridea, .restaurant__dish__heart__check:hover ~ .ridea {
+.restaurant__dish__heart__check:checked ~ .ridea {
   transform: scaleY(0);
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
 }
-.restaurant__dish__heart__check:checked ~ .full, .restaurant__dish__heart__check:hover ~ .full {
+.restaurant__dish__heart__check:checked ~ .full {
   animation: 200ms magnification 500ms;
 }
-.restaurant__dish__heart__check:checked ~ .empty, .restaurant__dish__heart__check:hover ~ .empty {
+.restaurant__dish__heart__check:checked ~ .empty {
   color: transparent;
 }
-.restaurant__dish__heart__check:checked ~ .empty:hover, .restaurant__dish__heart__check:hover ~ .empty:hover {
+.restaurant__dish__heart__check:checked ~ .empty:hover {
   cursor: grabbing;
+}
+@media screen and (min-width: 1200px) {
+  .restaurant__dish__heart__check:not(:checked):hover ~ .ridea {
+    transform: scaleY(0);
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+  }
+  .restaurant__dish__heart__check:not(:checked):hover ~ .full {
+    animation: 200ms magnification 500ms;
+  }
+  .restaurant__dish__heart__check:not(:checked):hover ~ .empty {
+    color: transparent;
+  }
+  .restaurant__dish__heart__check:not(:checked):hover ~ .empty:hover {
+    cursor: grab;
+  }
 }
 .restaurant__dish__heart i {
   font-size: 20px;
