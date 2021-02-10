@@ -20,19 +20,19 @@ header {
 
 h1 {
   font-family: Shrikhand, Arial, sans-serif;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 100;
 }
 
 h2 {
   font-family: Roboto, Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 900;
 }
 
 p {
   font-family: Roboto, Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 100;
 }
 
@@ -48,7 +48,7 @@ a {
 }
 
 input {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -58,7 +58,7 @@ button {
 }
 
 i {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 body .svg-settings {
@@ -587,7 +587,7 @@ body .linear-stop2 {
   margin-top: 5px;
 }
 .footer__container a i {
-  font-size: 0.75rem;
+  font-size: rem(12px);
   width: 50px;
   margin-right: 5px;
 }

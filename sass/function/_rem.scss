@@ -1,7 +1,0 @@
-//https://medium.com/@bhargav3shah/scss-convert-pixel-values-to-rem-using-functions-f1cef575edfd
-@function stripUnit($value) {
-    @return $value / ($value * 0 + 1);// supprime 'px' ex: 10px/((10px*0)4 +1)=10
-}
-@function rem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
-}
