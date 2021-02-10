@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>ohmyfood</title>
+</head>
+
+<body>
+    <!-- définition du dégradés pour les SVG  -->
+    <svg class="svg-settings">
+        <defs>
+            <linearGradient id="linear" x1="0" x2="1" y1="1" y2="0">
+                <stop class="linear-stop1" offset="0%"></stop>
+                <stop class="linear-stop2" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+<div class="loader">
+    <div class="item">o</div>
+    <div class="item">h</div>
+    <div class="item">m</div>
+    <div class="item">y</div>
+    <div class="item">f</div>
+    <div class="item">o</div>
+    <div class="item">o</div>
+    <div class="item">d</div>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <i class="knife fas fa-utensils  fill-gradient-linear"></i>
+    <i class="fork fas fa-utensils  fill-gradient-linear"></i>
+</div>
+    <header class="header">
+        <div class="header__logo">
+            <h1>ohmyfood</h1>
+        </div>
+    </header>
+    <section class="presentation">
+        <form class="presentation__form" action="index.html" method="post">
+            <div class="presentation__form__search">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="search" name="captue" size="12" value="Paris, Belleville" />
+            </div>
+            <h2 class="presentation__form__title">Réservez le menu qui vous convient</h2>
+            <p class="presentation__form__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button class="presentation__form__btn" type="submit">Explorer nos restaurants</button>
+        </form>
+    </section>
+    <section class="operating">
+        <h2 class="operating__title">Fonctionnement</h2>
+        <div class="operating__order">
+            <div class="operating__order__num">
+                <i class="fas fa-mobile-alt fa-fw"></i>
+                <span>Choisissez un restaurant</span>
+            </div>
+            <div class="operating__order__num">
+                <i class="fas fa-list-ul fa-fw"></i>
+                <span>Composez votre menu</span>
+            </div>
+            <div class="operating__order__num">
+                <i class="fas fa-store fa-fw"></i>
+                <span>Dégustez au restaurant</span>
+            </div>
+        </div>
+    </section>
+    <section class="restaurant">
+        <h2 class="restaurant__title">Restaurants</h2>
+        <article class="restaurant__dish">
+            <a href="La_palette_du_gout.html" class="restaurant__dish__link">
+                <div class="restaurant__dish__link__box-img">
+                    <img src="images/La_palette_du_gout.jpg" alt="photo du plat" />
+                    <span class="restaurant__dish__link__box-img__flag--show">Nouveau</span>
+                </div>
+                <div class="restaurant__dish__link__description">
+                    <h3 class="restaurant__dish__link__description__title">
+                        La palette du goût
+                    </h3>
+                    <p class="restaurant__dish__link__description__city">Ménilmontant</p>
+                </div>
+            </a>
+            <div class="restaurant__dish__heart">
+                <label for="check1">
+                    <input class="empty restaurant__dish__heart__check" id="check1" type="checkbox" />
+                    <i class="full fas fa-heart fill-gradient-linear"></i>
+                    <span class="ridea"></span>
+                    <i class="empty far fa-heart"></i>
+                </label>
+            </div>
+
+        </article>
+        <article class="restaurant__dish">
+            <a href="La_note_enchantee.html" class="restaurant__dish__link">
+                <div class="restaurant__dish__link__box-img">
+                    <img src="images/La_note_enchantee.jpg" alt="photo du plat" />
+                    <span class="restaurant__dish__link__box-img__flag--show">Nouveau</span>
+                </div>
+                <div class="restaurant__dish__link__description">
+                    <h3 class="restaurant__dish__link__description__title">
+                        La note enchantée
+                    </h3>
+                    <p class="restaurant__dish__link__description__city">Charonne</p>
+                </div>
+            </a>
+            <div class="restaurant__dish__heart">
+                <label for="check2">
+                    <input class="empty restaurant__dish__heart__check" id="check2" type="checkbox" />
+                    <i class="full fas fa-heart fill-gradient-linear"></i>
+                    <span class="ridea"></span>
+                    <i class="empty far fa-heart"></i>
+                </label>
+            </div>
+        </article>
+        <article class="restaurant__dish">
+            <a href="A_la_francaise.html" class="restaurant__dish__link">
+                <div class="restaurant__dish__link__box-img">
+                    <img src="images/A_la_francaise.jpg" alt="photo du plat" />
+                    <span class="restaurant__dish__link__box-img__flag--hidden">Nouveau</span>
+                </div>
+                <div class="restaurant__dish__link__description">
+                    <h3 class="restaurant__dish__link__description__title">
+                        À la française
+                    </h3>
+                    <p class="restaurant__dish__link__description__city">Cité Rouge</p>
+                </div>
+            </a>
+            <div class="restaurant__dish__heart">
+                <label for="check3">
+                    <input class="empty restaurant__dish__heart__check" id="check3" type="checkbox" />
+                    <i class="full fas fa-heart fill-gradient-linear"></i>
+                    <span class="ridea"></span>
+                    <i class="empty far fa-heart"></i>
+                </label>
+            </div>
+        </article>
+        <article class="restaurant__dish">
+            <a href="Le_delice_des_sens.html" class="restaurant__dish__link">
+                <div class="restaurant__dish__link__box-img">
+                    <img src="images/Le_delice_des_sens.jpg" alt="photo du plat" />
+                    <span class="restaurant__dish__link__box-img__flag--hidden">Nouveau</span>
+                </div>
+                <div class="restaurant__dish__link__description">
+                    <h3 class="restaurant__dish__link__description__title">
+                        Le délice des sens
+                    </h3>
+                    <p class="restaurant__dish__link__description__city">Folie-Méricourt</p>
+                </div>
+            </a>
+            <div class="restaurant__dish__heart">
+                <label for="check4">
+                    <input class="empty restaurant__dish__heart__check" id="check4" type="checkbox" />
+                    <i class="full fas fa-heart fill-gradient-linear"></i>
+                    <span class="ridea"></span>
+                    <i class="empty far fa-heart"></i>
+                </label>
+            </div>
+        </article>
+
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <h1 class="footer__container__title">ohmyfood</h1>
+            <a class="footer__container__about" href=""><i class="fas fa-utensils fa-fw"> </i> <span>Proposer un
+                    restaurant</span></a>
+            <a class="footer__container__partner" href=""><i class="fas fa-hands-helping fa-fw"></i> <span>Devenir
+                    partenaire</span></a>
+            <a class="footer__container__legal" href=""><span>Mentions légales</span></a>
+            <a class="footer__container__contact" href=""><span>Contact</span></a>
+        </div>
+    </footer>
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
+</body>
+</html>

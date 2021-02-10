@@ -1,0 +1,20 @@
+{
+  "name": "didierbecq_3_01022021",
+  "version": "1.0.0",
+  "description": "DidierBecq_3_01022021",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/pages/home.scss css/home.css",
+    "prefix": "postcss css/home.css --use autoprefixer -d css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becq-didier/DidierBecq_3_01022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becq-didier/DidierBecq_3_01022021/issues"
+  },
+  "homepage": "https://github.com/becq-didier/DidierBecq_3_01022021#readme"
+}

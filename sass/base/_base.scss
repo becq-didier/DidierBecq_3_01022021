@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: $html-font-size;
+    text-rendering: optimizeLegibility;
+    min-width: 320px;
+}
+
+header {
+    text-align: center;
+}
+
+
+h1 {
+    font-family: Shrikhand, Arial, sans-serif;
+    font-size:30px;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size:24px;
+    font-weight: 900;
+}
+
+p {
+    font-family: Roboto, Arial, sans-serif;
+    font-size:18px;
+    font-weight: 100;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    list-style: none;
+    font-family: Roboto, Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    font-size:16px;
+    font-weight: 600;
+}
+
+button {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+i {
+    font-size:16px;
+}

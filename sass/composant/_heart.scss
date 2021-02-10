@@ -1,0 +1,98 @@
+@mixin heart($font-taille: 25px, $empty, $full, $curtain) {
+    position: relative;
+
+    &__heart {
+        position: absolute;
+        bottom: $font-taille * 2;
+        right: $font-taille * 2;
+
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__check {
+            display: block;
+            position: absolute;
+            display: none;
+
+            &:checked {
+                &~.ridea {
+                    transform: scaleY(0);
+                    transition-duration: 500ms;
+                    transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+                }
+
+                &~.full {
+                    animation: 200ms magnification 500ms;
+                }
+
+                &~.empty {
+                    color: $empty;
+
+                    &:hover {
+                        cursor: grabbing;
+
+                    }
+
+                }
+            }
+
+            /*apparition du coeur sur hover en mode desktop */
+            @media (pointer: fine) {
+
+                &:not(:checked):hover {
+                    &~.ridea {
+                        transform: scaleY(0);
+                        transition-duration: 500ms;
+                        transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+                    }
+
+                    &~.full {
+                        animation: 200ms magnification 500ms;
+                    }
+
+                    &~.empty {
+                        color: $empty;
+
+                        &:hover {
+                            cursor: grab;
+
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        i {
+            font-size: $font-taille;
+            position: absolute;
+        }
+
+        .ridea {
+            position: absolute;
+            width: $font-taille * 2;
+            height: $font-taille * 2;
+            transform-origin: top;
+            background: $curtain;
+
+        }
+    }
+
+    @keyframes magnification {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+}
