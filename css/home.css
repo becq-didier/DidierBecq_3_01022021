@@ -463,8 +463,8 @@ body .linear-stop2 {
 }
 .restaurant__dish__heart {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: 50px;
+  right: 50px;
 }
 .restaurant__dish__heart label {
   display: flex;
@@ -508,13 +508,13 @@ body .linear-stop2 {
   }
 }
 .restaurant__dish__heart i {
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
 }
 .restaurant__dish__heart .ridea {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   transform-origin: top;
   background: white;
 }

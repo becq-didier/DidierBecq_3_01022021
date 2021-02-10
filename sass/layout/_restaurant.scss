@@ -18,7 +18,7 @@
         overflow: hidden;
 
 
-        @include heart(20px, transparent, $color-btn-primary, white); // icone coeur
+        @include heart(25px, transparent, $color-btn-primary, white); // icone coeur
 
         &__link {
             cursor: pointer;
