@@ -1,4 +1,4 @@
-@mixin heart($font-taille: 20px, $empty, $full, $curtain) {
+@mixin heart($font-taille: 25px, $empty, $full, $curtain) {
     position: relative;
 
     &__heart {
@@ -39,7 +39,8 @@
                 }
             }
 
-            @media screen and (min-width : 1200px) {
+            /*apparition du coeur sur hover en mode desktop */
+            @media (pointer: fine) {
 
                 &:not(:checked):hover {
                     &~.ridea {

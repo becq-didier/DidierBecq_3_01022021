@@ -475,6 +475,7 @@ body .linear-stop2 {
   display: block;
   position: absolute;
   display: none;
+  /*apparition du coeur sur hover en mode desktop */
 }
 .restaurant__dish__heart__check:checked ~ .ridea {
   transform: scaleY(0);
@@ -490,7 +491,7 @@ body .linear-stop2 {
 .restaurant__dish__heart__check:checked ~ .empty:hover {
   cursor: grabbing;
 }
-@media screen and (min-width: 1200px) {
+@media (pointer: fine) {
   .restaurant__dish__heart__check:not(:checked):hover ~ .ridea {
     transform: scaleY(0);
     transition-duration: 500ms;
