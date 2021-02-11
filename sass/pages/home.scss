@@ -10,9 +10,9 @@
 @import "../composant/_loader";
 //loyout
 @import "../layout/header";
-@import "../layout/presentation";
-@import "../layout/operation";
-@import "../layout/restaurant";
+@import "../pages/home/presentation";
+@import "../pages/home/operation";
+@import "../pages/home/restaurant";
 @import "../layout/footer";
 //responsive
 @import "../responsive/home@media";
