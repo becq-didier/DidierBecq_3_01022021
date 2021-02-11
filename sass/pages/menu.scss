@@ -6,13 +6,14 @@
 @import "../composant/button";
 @import "../composant/heart";
 @import "../composant/patern-heart";
-@import "../composant/_slider-home";
-@import "../composant/_loader";
+//->@import "../composant/_slider-home";
 //loyout
 @import "../layout/header";
-@import "../pages/home/presentation";
-@import "../pages/home/operation";
-@import "../pages/home/restaurant";
 @import "../layout/footer";
+//blocs pages
+@import "../pages/menu/header";
+@import "../pages/menu/illustrate";
+@import "../pages/menu/menu";
+@import "../pages/menu/order";
 //responsive
-@import "../responsive/home@media";
+@import "../responsive/menu@media";

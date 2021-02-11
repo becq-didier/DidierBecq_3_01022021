@@ -1,0 +1,74 @@
+ @media screen and (min-width : 800px) {
+     body {
+
+
+
+         main {
+             display: grid;
+             justify-content: center;
+             grid-template-columns: 400px 400px;
+             grid-template-areas:
+                 "illustrate illustrate"
+                 "order dish"
+                 "dessert dessert"
+                 "button button"
+
+         }
+
+         .illustrate {
+             grid-area: illustrate;
+         }
+
+         .menu:nth-child(1) {
+             grid-area: order;
+         }
+
+         .menu:nth-child(2) {
+             grid-area: dish;
+         }
+
+         .menu:nth-child(3) {
+             grid-area: dessert;
+         }
+
+     .order {
+         grid-area: button;
+     }
+
+     & .footer {
+         position: fixed;
+         width: 100%;
+         bottom: 0;
+         z-index: 10;
+
+
+         &__container {
+             flex-direction: row;
+             justify-content: space-around;
+             align-items: baseline;
+             margin-right: 40px;
+             padding: 10px;
+         }
+     }
+ }
+ }
+
+
+ @media screen and (min-width : 1200px) {
+     body {
+
+
+
+         main {
+             display: grid;
+             justify-content: center;
+             grid-template-columns: 400px 400px 400px;
+             grid-template-areas:
+                 "illustrate illustrate illustrate"
+                 "order dish dessert"
+                 "button button button"
+
+         }
+
+     }
+ }
