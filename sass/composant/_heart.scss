@@ -17,7 +17,7 @@
             position: absolute;
             display: none;
 
-            &:checked {
+            &:checked , &:hover{
                 &~.ridea {
                     transform: scaleY(0);
                     transition-duration: 500ms;

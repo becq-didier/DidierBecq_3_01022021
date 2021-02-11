@@ -199,18 +199,18 @@ section {
   display: none;
   /*apparition du coeur sur hover en mode desktop */
 }
-.illustrate__heart__check:checked ~ .ridea {
+.illustrate__heart__check:checked ~ .ridea, .illustrate__heart__check:hover ~ .ridea {
   transform: scaleY(0);
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
 }
-.illustrate__heart__check:checked ~ .full {
+.illustrate__heart__check:checked ~ .full, .illustrate__heart__check:hover ~ .full {
   animation: 200ms magnification 500ms;
 }
-.illustrate__heart__check:checked ~ .empty {
+.illustrate__heart__check:checked ~ .empty, .illustrate__heart__check:hover ~ .empty {
   color: transparent;
 }
-.illustrate__heart__check:checked ~ .empty:hover {
+.illustrate__heart__check:checked ~ .empty:hover, .illustrate__heart__check:hover ~ .empty:hover {
   cursor: grabbing;
 }
 @media (pointer: fine) {
