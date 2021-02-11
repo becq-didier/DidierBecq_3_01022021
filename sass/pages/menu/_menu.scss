@@ -41,7 +41,7 @@
 
             // coarse
             &:hover &__check {
-                width: 60px;
+                min-width: 60px;
             }
         }
 

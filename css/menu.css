@@ -259,7 +259,7 @@ section {
 }
 @media (pointer: fine) {
   .menu__container:hover .menu__container__check {
-    width: 60px;
+    min-width: 60px;
   }
 }
 .menu__container__element {
