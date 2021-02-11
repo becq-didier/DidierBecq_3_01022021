@@ -1,0 +1,17 @@
+//varaible
+@import "../utils/variable";
+//base
+@import "../base/base";
+//composant
+@import "../composant/button";
+@import "../composant/heart";
+@import "../composant/patern-heart";
+//->@import "../composant/_slider-home";
+//loyout
+@import "../layout/header";
+@import "../layout/footer";
+//blocs pages
+@import "../pages/menu/header";
+@import "../pages/menu/illustrate";
+@import "../pages/menu/menu";
+@import "../pages/menu/order";
