@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 *,
@@ -277,6 +276,9 @@ section {
   width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .menu__title {
   display: block;
@@ -302,22 +304,77 @@ section {
   background: white;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.16);
   overflow: hidden;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.16);
   z-index: 10;
   /*apparition du check sur hover en mode desktop */
+  min-width: 200px;
+}
+.menu__container input {
+  position: absolute;
+  visibility: hidden;
 }
 @media (pointer: fine) {
   .menu__container:hover .menu__container__check {
     min-width: 60px;
+    transform: min-width translateX(0px);
+    transform-origin: right;
+    transition-duration: 500ms;
+  }
+  .menu__container:hover .menu__container__check i {
+    transform: rotate(720deg);
+    transition-duration: 500ms;
   }
 }
-.menu__container__element {
+input:checked ~ .menu__container__check {
+  min-width: 60px;
+  transform: min-width translateX(0px);
+  transform-origin: right;
+  transition-duration: 500ms;
+}
+input:checked ~ .menu__container__check i {
+  transform: rotate(720deg);
+  transition-duration: 500ms;
+}
+.menu__container__check {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #99E2D0;
+  transform: min-width;
+  transition-duration: 500ms;
   min-width: 0;
+  cursor: pointer;
+}
+.menu__container__check i {
+  z-index: 1;
+  position: absolute;
+  margin: auto;
+  top: 30px;
+  left: 25px;
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+}
+.menu__container__check i::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  margin: auto;
+  transform: translate(-5px, -5px);
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+}
+.menu__container__element {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  min-width: 0;
   flex-grow: 1;
+  padding: 10px;
 }
 .menu__container__element__title {
   white-space: nowrap;
@@ -339,49 +396,11 @@ section {
 }
 .menu__container__price {
   display: flex;
+  height: auto;
   padding: 10px 25px;
   align-items: flex-end;
   cursor: pointer;
   font-weight: 500;
-}
-.menu__container__check {
-  position: relative;
-  background: #99E2D0;
-  height: auto;
-  cursor: pointer;
-}
-.menu__container__check input {
-  opacity: 0;
-  height: 10px;
-  width: 0px;
-  margin: 0px;
-  /* bloque la largeur quand checké */
-}
-.menu__container__check input:checked {
-  width: 60px;
-}
-.menu__container__check__checkmark {
-  border-radius: 50%;
-  position: absolute;
-  top: 25px;
-  left: 19px;
-  background-color: white;
-  width: 20px;
-  height: 20px;
-  /* Style de la checkbox */
-}
-.menu__container__check__checkmark:after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 3px;
-  width: 4px;
-  height: 9px;
-  border: solid #99E2D0;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 .order {
@@ -413,22 +432,22 @@ section {
     display: grid;
     justify-content: center;
     grid-template-columns: 400px 400px;
-    grid-template-areas: "illustrate illustrate" "order dish" "dessert dessert" "button button";
+    grid-template-areas: "_illustrate _illustrate" "_order _dish" "_dessert _dessert" "_button _button";
   }
   body .illustrate {
-    grid-area: illustrate;
+    grid-area: _illustrate;
   }
   body .menu:nth-child(1) {
-    grid-area: order;
+    grid-area: _dessert;
   }
   body .menu:nth-child(2) {
-    grid-area: dish;
+    grid-area: _order;
   }
   body .menu:nth-child(3) {
-    grid-area: dessert;
+    grid-area: _dish;
   }
   body .order {
-    grid-area: button;
+    grid-area: _button;
   }
   body .footer {
     position: fixed;
@@ -449,7 +468,7 @@ section {
     display: grid;
     justify-content: center;
     grid-template-columns: 400px 400px 400px;
-    grid-template-areas: "illustrate illustrate illustrate" "order dish dessert" "button button button";
+    grid-template-areas: "_illustrate _illustrate _illustrate" "_order _dish _dessert" "_button _button _button";
   }
 }
 

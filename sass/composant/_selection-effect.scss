@@ -1,0 +1,75 @@
+@mixin check {
+
+    input {
+        position: absolute;
+        visibility: hidden;
+
+
+    }
+
+    /*apparition du check sur hover en mode desktop */
+    @media (pointer: fine) {
+        &:hover &__check {
+            min-width: 60px;
+            transform: min-width translateX(0px);
+            transform-origin: right;
+            transition-duration: 500ms;
+
+            i {
+                transform: rotate(360deg * 2);
+                transition-duration: 500ms;
+            }
+        }
+    }
+
+    input:checked~&__check {
+        min-width: 60px;
+        transform: min-width translateX(0px);
+        transform-origin: right;
+        transition-duration: 500ms;
+
+        i {
+            transform: rotate(360deg * 2);
+            transition-duration: 500ms;
+        }
+    }
+
+    &__check {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: $color-fond-flag;
+        transform: min-width;
+        transition-duration: 500ms;
+        min-width: 0;
+        cursor: pointer;
+
+
+
+        i {
+            z-index: 1;
+            position: absolute;
+            margin: auto;
+            top: 30px;
+            left: 25px;
+            width: 10px;
+            height: 10px;
+            font-size: 10px;
+
+            &::before {
+                z-index: -1;
+                position: absolute;
+                content: "";
+                margin: auto;
+                transform: translate(-5px, -5px);
+                width: 20px;
+                height: 20px;
+                background: white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
