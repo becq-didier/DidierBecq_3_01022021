@@ -8,31 +8,31 @@
              justify-content: center;
              grid-template-columns: 400px 400px;
              grid-template-areas:
-                 "illustrate illustrate"
-                 "order dish"
-                 "dessert dessert"
-                 "button button"
+                 "_illustrate _illustrate"
+                 "_order _dish"
+                 "_dessert _dessert"
+                 "_button _button"
 
          }
 
          .illustrate {
-             grid-area: illustrate;
+             grid-area: _illustrate;
          }
 
          .menu:nth-child(1) {
-             grid-area: order;
+             grid-area: _dessert;
          }
 
          .menu:nth-child(2) {
-             grid-area: dish;
+             grid-area: _order;
          }
 
          .menu:nth-child(3) {
-             grid-area: dessert;
+             grid-area: _dish;
          }
 
      .order {
-         grid-area: button;
+         grid-area: _button;
      }
 
      & .footer {
@@ -64,9 +64,9 @@
              justify-content: center;
              grid-template-columns: 400px 400px 400px;
              grid-template-areas:
-                 "illustrate illustrate illustrate"
-                 "order dish dessert"
-                 "button button button"
+                 "_illustrate _illustrate _illustrate"
+                 "_order _dish _dessert"
+                 "_button _button _button"
 
          }
 
