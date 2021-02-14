@@ -3,15 +3,14 @@
     input {
         position: absolute;
         visibility: hidden;
-
-
     }
 
     /*apparition du check sur hover en mode desktop */
     @media (pointer: fine) {
+        /* effect rotation + translation */
         &:hover &__check {
             min-width: 60px;
-            transform: min-width translateX(0px);
+            transform: translateX(0px);
             transform-origin: right;
             transition-duration: 500ms;
 
@@ -22,9 +21,11 @@
         }
     }
 
+    /* apparition du check en mode mobile et desktop sur checked */
     input:checked~&__check {
+        /* effect rotation + translation */
         min-width: 60px;
-        transform: min-width translateX(0px);
+        transform: translateX(0px);
         transform-origin: right;
         transition-duration: 500ms;
 
@@ -34,6 +35,7 @@
         }
     }
 
+    /*positionnement des élément qui constituent le check*/
     &__check {
         display: flex;
         height: auto;
@@ -41,13 +43,12 @@
         justify-content: center;
         position: relative;
         background: $color-fond-flag;
-        transform: min-width;
+        transform: all;
         transition-duration: 500ms;
         min-width: 0;
         cursor: pointer;
 
-
-
+        /*icone check*/
         i {
             z-index: 1;
             position: absolute;
@@ -58,6 +59,7 @@
             height: 10px;
             font-size: 10px;
 
+            /*rond blanc autour du check*/
             &::before {
                 z-index: -1;
                 position: absolute;

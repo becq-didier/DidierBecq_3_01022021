@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 *,
@@ -157,7 +158,7 @@ body .linear-stop2 {
   margin-top: 5px;
 }
 .footer__container a i {
-  font-size: rem(12px);
+  font-size: 12px;
   width: 50px;
   margin-right: 5px;
 }
@@ -306,6 +307,8 @@ section {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.16);
   z-index: 10;
   /*apparition du check sur hover en mode desktop */
+  /* apparition du check en mode mobile et desktop sur checked */
+  /*positionnement des élément qui constituent le check*/
   min-width: 200px;
 }
 .menu__container input {
@@ -313,9 +316,12 @@ section {
   visibility: hidden;
 }
 @media (pointer: fine) {
+  .menu__container {
+    /* effect rotation + translation */
+  }
   .menu__container:hover .menu__container__check {
     min-width: 60px;
-    transform: min-width translateX(0px);
+    transform: translateX(0px);
     transform-origin: right;
     transition-duration: 500ms;
   }
@@ -325,8 +331,9 @@ section {
   }
 }
 input:checked ~ .menu__container__check {
+  /* effect rotation + translation */
   min-width: 60px;
-  transform: min-width translateX(0px);
+  transform: translateX(0px);
   transform-origin: right;
   transition-duration: 500ms;
 }
@@ -341,10 +348,11 @@ input:checked ~ .menu__container__check i {
   justify-content: center;
   position: relative;
   background: #99E2D0;
-  transform: min-width;
+  transform: all;
   transition-duration: 500ms;
   min-width: 0;
   cursor: pointer;
+  /*icone check*/
 }
 .menu__container__check i {
   z-index: 1;
@@ -355,6 +363,7 @@ input:checked ~ .menu__container__check i {
   width: 10px;
   height: 10px;
   font-size: 10px;
+  /*rond blanc autour du check*/
 }
 .menu__container__check i::before {
   z-index: -1;
