@@ -184,53 +184,54 @@ section {
 }
 .illustrate__heart {
   position: absolute;
-  bottom: 50px;
+  width: 25px;
+  height: 25px;
+  bottom: 16px;
   right: 50px;
+  /*apparition du coeur sur hover en mode desktop */
 }
-.illustrate__heart label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (pointer: fine) {
+  .illustrate__heart:hover .ridea {
+    transform: scaleY(0);
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+  }
+  .illustrate__heart:hover .full {
+    animation: 200ms magnification 500ms;
+  }
+  .illustrate__heart:hover .empty {
+    color: transparent;
+  }
+  .illustrate__heart:hover .empty:hover {
+    cursor: pointer;
+  }
+}
+.illustrate__heart input:checked + label .ridea {
+  transform: scaleY(0);
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+}
+.illustrate__heart input:checked + label .full {
+  animation: 200ms magnification 500ms;
+}
+.illustrate__heart input:checked + label .empty {
+  color: transparent;
+}
+.illustrate__heart input:checked + label .empty:hover {
+  cursor: pointer;
 }
 .illustrate__heart__check {
   display: block;
   position: absolute;
   display: none;
-  /*apparition du coeur sur hover en mode desktop */
-}
-.illustrate__heart__check:checked ~ .ridea, .illustrate__heart__check:hover ~ .ridea {
-  transform: scaleY(0);
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
-}
-.illustrate__heart__check:checked ~ .full, .illustrate__heart__check:hover ~ .full {
-  animation: 200ms magnification 500ms;
-}
-.illustrate__heart__check:checked ~ .empty, .illustrate__heart__check:hover ~ .empty {
-  color: transparent;
-}
-.illustrate__heart__check:checked ~ .empty:hover, .illustrate__heart__check:hover ~ .empty:hover {
-  cursor: grabbing;
-}
-@media (pointer: fine) {
-  .illustrate__heart__check:not(:checked):hover ~ .ridea {
-    transform: scaleY(0);
-    transition-duration: 500ms;
-    transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
-  }
-  .illustrate__heart__check:not(:checked):hover ~ .full {
-    animation: 200ms magnification 500ms;
-  }
-  .illustrate__heart__check:not(:checked):hover ~ .empty {
-    color: transparent;
-  }
-  .illustrate__heart__check:not(:checked):hover ~ .empty:hover {
-    cursor: grab;
-  }
+  bottom: 25px;
+  right: 25px;
 }
 .illustrate__heart i {
   font-size: 25px;
   position: absolute;
+  top: 25px;
+  left: 25px;
 }
 .illustrate__heart .ridea {
   position: absolute;
@@ -267,9 +268,6 @@ section {
   background: #F6F6F6;
   border-radius: 30px 30px 0 0;
   font-family: Shrikhand, Arial, sans-serif;
-}
-.illustrate__heart {
-  bottom: 0px;
 }
 
 .menu {
