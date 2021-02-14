@@ -1,75 +1,72 @@
-@mixin heart($font-taille: 25px, $empty, $full, $curtain) {
+@mixin heart($font-taille: 25px, $empty, $full, $curtain, $bottom, $right) {
     position: relative;
-
+    
     &__heart {
         position: absolute;
-        bottom: $font-taille * 2;
-        right: $font-taille * 2;
+        width: $font-taille;
+        height: $font-taille;
+        bottom: $bottom;
+        right:$right; 
 
-        label {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &__check {
-            display: block;
-            position: absolute;
-            display: none;
-
-            &:checked, &:hover{
-                &~.ridea {
+        /*apparition du coeur sur hover en mode desktop */
+        @media (pointer: fine) {
+            &:hover {
+                & .ridea {
                     transform: scaleY(0);
                     transition-duration: 500ms;
                     transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
                 }
 
-                &~.full {
+                & .full {
                     animation: 200ms magnification 500ms;
                 }
 
-                &~.empty {
+                & .empty {
                     color: $empty;
 
                     &:hover {
-                        cursor: grabbing;
-
-                    }
-
-                }
-            }
-
-            /*apparition du coeur sur hover en mode desktop */
-            @media (pointer: fine) {
-
-                &:not(:checked):hover {
-                    &~.ridea {
-                        transform: scaleY(0);
-                        transition-duration: 500ms;
-                        transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
-                    }
-
-                    &~.full {
-                        animation: 200ms magnification 500ms;
-                    }
-
-                    &~.empty {
-                        color: $empty;
-
-                        &:hover {
-                            cursor: grab;
-
-                        }
-
+                        cursor: pointer;
                     }
                 }
             }
+        }
 
+        & input:checked {
+            &+label {
+                & .ridea {
+                    transform: scaleY(0);
+                    transition-duration: 500ms;
+                    transition-timing-function: cubic-bezier(0.32, 1.51, 0.99, -0.54);
+                }
+
+                & .full {
+                    animation: 200ms magnification 500ms;
+                }
+
+                & .empty {
+                    color: $empty;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+
+        &__check {
+            display: block;
+            position: absolute;
+            display: none;
+            bottom: $font-taille;
+            right: $font-taille;
         }
 
         i {
             font-size: $font-taille;
             position: absolute;
+            top: $font-taille;
+            left: $font-taille;
         }
 
         .ridea {
