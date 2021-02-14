@@ -5,9 +5,9 @@
         visibility: hidden;
     }
 
-    /*apparition du check sur hover en mode desktop */
+    //apparition du check sur hover en mode desktop 
     @media (pointer: fine) {
-        /* effect rotation + translation */
+        // effect rotation + translation 
         &:hover &__check {
             min-width: 60px;
             transform: translateX(0px);
@@ -21,9 +21,9 @@
         }
     }
 
-    /* apparition du check en mode mobile et desktop sur checked */
+    // apparition du check en mode mobile et desktop sur checked 
     input:checked~&__check {
-        /* effect rotation + translation */
+        // effect rotation + translation 
         min-width: 60px;
         transform: translateX(0px);
         transform-origin: right;
@@ -35,7 +35,7 @@
         }
     }
 
-    /*positionnement des élément qui constituent le check*/
+    //positionnement des élément qui constituent le check
     &__check {
         display: flex;
         height: auto;
@@ -48,7 +48,7 @@
         min-width: 0;
         cursor: pointer;
 
-        /*icone check*/
+        //icone check
         i {
             z-index: 1;
             position: absolute;
@@ -59,7 +59,7 @@
             height: 10px;
             font-size: 10px;
 
-            /*rond blanc autour du check*/
+            //rond blanc autour du check
             &::before {
                 z-index: -1;
                 position: absolute;

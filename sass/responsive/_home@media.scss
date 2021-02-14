@@ -9,7 +9,6 @@
             "_header _restaurant _restaurant _restaurant"
             "_presentation _restaurant _restaurant _restaurant"
             "_operating _restaurant _restaurant _restaurant"
-            //"_footer _restaurant _restaurant _restaurant"
             "_footer _footer _footer _footer"
         ;
         background: $color-fond-presentation;
@@ -98,7 +97,7 @@
 
         & .footer {
             grid-area: _footer;
-            
+
 
             &__container {
                 flex-direction: row;

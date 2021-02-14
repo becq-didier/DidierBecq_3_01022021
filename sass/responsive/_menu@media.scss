@@ -1,8 +1,5 @@
  @media screen and (min-width : 800px) {
      body {
-
-
-
          main {
              display: grid;
              justify-content: center;
@@ -31,34 +28,29 @@
              grid-area: _dish;
          }
 
-     .order {
-         grid-area: _button;
-     }
+         .order {
+             grid-area: _button;
+         }
 
-     & .footer {
-         position: fixed;
-         width: 100%;
-         bottom: 0;
-         z-index: 10;
+         & .footer {
+             position: fixed;
+             width: 100%;
+             bottom: 0;
+             z-index: 10;
 
-
-         &__container {
-             flex-direction: row;
-             justify-content: space-around;
-             align-items: baseline;
-             margin-right: 40px;
-             padding: 10px;
+             &__container {
+                 flex-direction: row;
+                 justify-content: space-around;
+                 align-items: baseline;
+                 margin-right: 40px;
+                 padding: 10px;
+             }
          }
      }
  }
- }
-
 
  @media screen and (min-width : 1200px) {
      body {
-
-
-
          main {
              display: grid;
              justify-content: center;
@@ -67,8 +59,6 @@
                  "_illustrate _illustrate _illustrate"
                  "_order _dish _dessert"
                  "_button _button _button"
-
          }
-
      }
  }

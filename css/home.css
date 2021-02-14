@@ -62,7 +62,7 @@ i {
 }
 
 body .svg-settings {
-  position: absolute !important;
+  position: absolute;
   color: blue;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px);
@@ -467,7 +467,6 @@ body .linear-stop2 {
   height: 25px;
   bottom: 55px;
   right: 50px;
-  /*apparition du coeur sur hover en mode desktop */
 }
 @media (pointer: fine) {
   .restaurant__dish__heart:hover .ridea {

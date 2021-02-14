@@ -1,14 +1,14 @@
 @mixin heart($font-taille: 25px, $empty, $full, $curtain, $bottom, $right) {
     position: relative;
-    
+
     &__heart {
         position: absolute;
         width: $font-taille;
         height: $font-taille;
         bottom: $bottom;
-        right:$right; 
+        right: $right;
 
-        /*apparition du coeur sur hover en mode desktop */
+        //apparition du coeur sur hover en mode desktop
         @media (pointer: fine) {
             &:hover {
                 & .ridea {
@@ -31,6 +31,7 @@
             }
         }
 
+        // apparition du check en mode mobile et desktop sur checked
         & input:checked {
             &+label {
                 & .ridea {
@@ -53,7 +54,7 @@
             }
         }
 
-
+        //positionnement des élément qui constituent le coeur
         &__check {
             display: block;
             position: absolute;
@@ -79,6 +80,7 @@
         }
     }
 
+    //effet battement de coeur
     @keyframes magnification {
         0% {
             transform: scale(1);

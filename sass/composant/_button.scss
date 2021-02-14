@@ -13,9 +13,7 @@
      background: linear-gradient(175deg, $color-btn-secondary 0%, $color-btn-primary 100%);
 
      &:hover {
-
          box-shadow: 5px 5px 10px rgb(0 0 0 / 60%), inset -1px -1px 2px $color-btn-primary;
          background: linear-gradient(175deg, lighten($color-btn-secondary, 4%) 0%, lighten($color-btn-primary, 1%) 100%);
-
      }
  }
