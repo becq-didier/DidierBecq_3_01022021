@@ -339,7 +339,7 @@ input:checked ~ .menu__container__check i {
   justify-content: center;
   position: relative;
   background: #99E2D0;
-  transform: all;
+  transition-property: min-width;
   transition-duration: 500ms;
   min-width: 0;
   cursor: pointer;

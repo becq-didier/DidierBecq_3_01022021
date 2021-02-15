@@ -7,6 +7,7 @@
 
     //apparition du check sur hover en mode desktop 
     @media (pointer: fine) {
+
         // effect rotation + translation 
         &:hover &__check {
             min-width: 60px;
@@ -43,7 +44,7 @@
         justify-content: center;
         position: relative;
         background: $color-fond-flag;
-        transform: all;
+        transition-property: min-width;
         transition-duration: 500ms;
         min-width: 0;
         cursor: pointer;
